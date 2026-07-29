@@ -1559,7 +1559,7 @@ class Building(Environment):
             Fraction of `dhw_storage` `capacity` to charge/discharge by.
         """
 
-        energy = action * self.heating_storage.capacity * self.algorithm_action_based_time_step_hours_ratio
+        energy = action * self.dhw_storage.capacity * self.algorithm_action_based_time_step_hours_ratio
         temperature = self.weather.outdoor_dry_bulb_temperature[self.time_step]
 
         if energy > 0.0:
